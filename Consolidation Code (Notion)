@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+token = 'ABC'
+price = np.array([50, 55, 52, 48, 52, 54, 53, 51, 49, 50, 52, 51, 54, 56, 55, 54, 52, 50, 48, 49])
+support_level = 48
+resistance_level = 56
+
+fig, ax = plt.subplots(figsize=(10, 5))
+ax.plot(price)
+
+ax.axhline(y=support_level, color='green', linestyle='--')
+ax.axhline(y=resistance_level, color='red', linestyle='--')
+
+ax.set_title(f'{token} Price Consolidation')
+ax.set_xlabel('Time')
+ax.set_ylabel('Price ($)')
+
+plt.show()
